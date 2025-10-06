@@ -12,29 +12,38 @@
       background: #0d0d0d;
       color: #f5f5f5;
       line-height: 1.6;
+      transition: background 0.3s;
+    }
+
+    /* ✅ Responsive Design */
+    @media (max-width: 600px) {
+      body {
+        background: lightblue;
+      }
+    }
+
+    /* ✅ Style all <h1> headers */
+    h1 {
+      color: red;
+      text-align: center;
+      font-family: Arial, sans-serif;
     }
 
     header {
       background: linear-gradient(90deg, #b30000, #660000);
-      text-align: center;
       padding: 40px 20px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      letter-spacing: 2px;
-    }
-
     header p {
-      font-size: 1.2rem;
+      font-size: 20px;
       color: #ddd;
       margin-top: 10px;
+      text-align: center;
     }
 
     /* --- Navigation --- */
     nav {
-      background: #1a1a1a;
+      background: yellow;
       text-align: center;
       padding: 12px;
       position: sticky;
@@ -43,7 +52,7 @@
     }
 
     nav a {
-      color: #f5f5f5;
+      color: #000;
       text-decoration: none;
       margin: 0 20px;
       font-weight: bold;
@@ -73,15 +82,23 @@
       padding-left: 10px;
     }
 
-    p {
-      font-size: 1.1rem;
-      color: #ddd;
+    /* ✅ Highlight Class */
+    .highlight {
+      font-weight: bold;
+      background: yellow;
+      font-size: 20px;
+      color: #000;
+      padding: 5px;
+      border-radius: 5px;
     }
 
-    ul {
-      list-style: square;
-      padding-left: 20px;
-      color: #ccc;
+    /* ✅ Box Model Practice */
+    .box {
+      margin: 20px;
+      padding: 10px;
+      border: 2px solid black;
+      background: #1a1a1a;
+      border-radius: 10px;
     }
 
     /* --- Image --- */
@@ -130,7 +147,7 @@
       background: #262626;
     }
 
-     iframe {
+    iframe {
       display: block;
       margin: 30px auto;
       width: 90%;
@@ -141,7 +158,73 @@
       box-shadow: 0 5px 20px rgba(255, 0, 0, 0.5);
     }
 
-    /* --- Footer --- */
+    /* ✅ Background Image on .banner */
+    .banner {
+      background: url('https://cdn.pixabay.com/photo/2017/01/06/19/15/car-1957037_1280.jpg') no-repeat center center;
+      background-size: cover;
+      height: 250px;
+      margin: 30px 0;
+      border-radius: 15px;
+    }
+
+    /* ✅ Transition Button */
+    .transition-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: blue;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      transition: background 0.5s;
+    }
+
+    .transition-btn:hover {
+      background: green;
+    }
+
+    /* ✅ Absolute vs Relative Positioning */
+    .relative-box {
+      position: relative;
+      background: #222;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #b30000;
+      padding: 10px;
+      color: #fff;
+    }
+
+    /* ✅ Grid Layout */
+    .grid-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .grid-item {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #b30000;
+    }
+
+    /* ✅ Paragraph with em unit */
+    p {
+      font-size: 1.2em;
+    }
+
+    /* ✅ Color Formats */
+    .rgb-text { color: rgb(255,0,0); }
+    .hex-text { color: #00ff00; }
+    .hsl-text { color: hsl(240, 100%, 50%); }
+
     footer {
       background: #1a1a1a;
       color: #aaa;
@@ -163,13 +246,11 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <h1>Sports Cars World</h1>
     <p>The ultimate destination for speed, style, and performance.</p>
   </header>
 
-  <!-- Navigation -->
   <nav>
     <a href="#">Home</a>
     <a href="#">Models</a>
@@ -178,26 +259,42 @@
     <a href="https://github.com/yourusername" target="_blank">GitHub</a>
   </nav>
 
-  
   <main>
+
     <section>
       <h2>Welcome to Sports Cars World</h2>
-      <p>We bring you the finest selection of high-performance sports cars from around the globe. Explore models, compare prices, and learn more about the technology that drives them.</p>
-
-      <img src="https://tinyurl.com/2s4f5k8j" alt="Ferrari F8 Tributo" />
-
-      <h3>Our Top Services</h3>
-      <ul>
-        <li>Car reviews and ratings</li>
-        <li>Dealer recommendations</li>
-        <li>Car customization options</li>
-        <li>Test drive bookings</li>
-        <li>Exclusive buyer offers</li>
-      </ul>
+      <p class="highlight">We bring you the finest selection of high-performance sports cars from around the globe.</p>
+     <img src="https://tinyurl.com/2s4f5k8j" alt="Ferrari F8 Tributo" />
+<img src="https://www.spinny.com/blog/wp-content/uploads/2024/09/videoframe_0.webp">
     </section>
 
+    <!-- ✅ Box Model Example -->
+    <div class="box">
+      <h2>Box Model Practice</h2>
+      <p>This section demonstrates margin, padding, and border properties.</p>
+    </div>
+
+    <!-- ✅ Banner with background image -->
+    <div class="banner"></div>
+
+    <!-- ✅ Transition Button -->
+    <button class="transition-btn">Hover Me</button>
+
+    <!-- ✅ Positioning Example -->
+    <div class="relative-box">
+      This is a relative container.
+      <div class="absolute-box">I am absolutely positioned!</div>
+    </div>
+
+    <!-- ✅ Grid Layout -->
+    <section class="grid-section">
+      <div class="grid-item">Grid Item 1: Sports car design evolution</div>
+      <div class="grid-item">Grid Item 2: Performance engineering explained</div>
+    </section>
+
+    <!-- ✅ Table -->
     <section>
-      <h2>Sports Car Showcase</h2>
+      <h2>Sports Car Comparison</h2>
       <table>
         <caption>Top Sports Cars Comparison</caption>
         <tr>
@@ -223,15 +320,23 @@
       </table>
     </section>
 
+    <!-- ✅ Video -->
     <section>
       <h2>Sports Car Engine Tutorial</h2>
-      <p>This video explains the inner workings of a high-performance sports car engine and how aerodynamics enhance speed and control.</p>
-
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/YAFUyPp_238?si=kWaU2cyMoFmkxEph" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p>This video explains how sports car engines and aerodynamics work.</p>
+      <iframe src="https://www.youtube.com/embed/YAFUyPp_238" allowfullscreen></iframe>
     </section>
+
+    <!-- ✅ Color Formats -->
+    <section>
+      <h2>Color Formats</h2>
+      <p class="rgb-text">This paragraph uses RGB format.</p>
+      <p class="hex-text">This paragraph uses HEX format.</p>
+      <p class="hsl-text">This paragraph uses HSL format.</p>
+    </section>
+
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>Contact us: <a href="mailto:info@sportscarsworld.com">info@sportscarsworld.com</a> | Phone: +123 456 7890</p>
     <p>&copy; 2025 Sports Cars World. All rights reserved.</p>
